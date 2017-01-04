@@ -34,6 +34,14 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func onSetTipControlChanged(_ sender: Any) {
+    }
+    
+    
+    @IBAction func onStepperChanged(_ sender: Any) {
+    }
+    
 
     /*
     // MARK: - Navigation

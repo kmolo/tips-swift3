@@ -143,10 +143,16 @@
                                     <segment title="20%"/>
                                     <segment title="22%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="onSetTipControlChanged:" destination="Eqt-Th-sGg" eventType="valueChanged" id="9Ax-32-u1r"/>
+                                </connections>
                             </segmentedControl>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="da5-cX-zvw">
                                 <rect key="frame" x="113" y="227" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onStepperChanged:" destination="Eqt-Th-sGg" eventType="valueChanged" id="mTh-h2-4QN"/>
+                                </connections>
                             </stepper>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
