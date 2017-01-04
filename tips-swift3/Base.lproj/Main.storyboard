@@ -93,12 +93,21 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sgm-ON-1UJ" appends="YES" id="q3o-bu-qa1"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Ndv-rE-tC6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sgm-ON-1UJ">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="Qq0-JU-vaD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="605" y="136"/>
+            <point key="canvasLocation" x="463" y="136"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
