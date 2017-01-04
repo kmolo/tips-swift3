@@ -10,6 +10,9 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var setTipControl: UISegmentedControl!
+    @IBOutlet weak var setTipStepper: UIStepper!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

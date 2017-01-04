@@ -152,6 +152,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kyl-IS-k4m"/>
+                    <connections>
+                        <outlet property="setTipControl" destination="cuI-ZL-fUe" id="TRD-ga-sdD"/>
+                        <outlet property="setTipStepper" destination="da5-cX-zvw" id="59p-JF-yql"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbA-L5-GKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
