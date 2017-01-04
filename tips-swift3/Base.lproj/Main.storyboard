@@ -104,7 +104,13 @@
                             <outletCollection property="gestureRecognizers" destination="sgm-ON-1UJ" appends="YES" id="q3o-bu-qa1"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="Ndv-rE-tC6"/>
+                    <navigationItem key="navigationItem" id="Ndv-rE-tC6">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="0ux-jO-onj">
+                            <connections>
+                                <segue destination="Eqt-Th-sGg" kind="push" id="Erl-At-Tul"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="Dqz-Ov-Vyr" id="7dn-Kd-k7y"/>
                         <outlet property="tipControl" destination="ryR-ae-phR" id="Aqo-bN-XwL"/>
@@ -130,6 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kyl-IS-k4m"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbA-L5-GKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
