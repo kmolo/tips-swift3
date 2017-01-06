@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         refreshTipPercentages()
         selectSegment()
         calculate()
+        
+        billField.becomeFirstResponder()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
