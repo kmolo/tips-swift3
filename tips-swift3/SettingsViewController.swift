@@ -39,8 +39,13 @@ class SettingsViewController: UIViewController {
         setStepperValue()
     }
     
-    
-    @IBAction func onStepperChanged(_ sender: Any) {
+    @IBAction func onStepperChanged(_ sender: UIStepper) {
+        let newTipPercentage = String(Int(sender.value)) + "%"
+        let currentIndex = setTipControl.selectedSegmentIndex
+        
+        setTipControl.setTitle(newTipPercentage, forSegmentAt: currentIndex)
+        
+        //print(newTipPercentage)
     }
     
     func setStepperValue(){

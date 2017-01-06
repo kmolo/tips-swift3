@@ -151,7 +151,7 @@
                                 <rect key="frame" x="113" y="227" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="onStepperChanged:" destination="Eqt-Th-sGg" eventType="valueChanged" id="mTh-h2-4QN"/>
+                                    <action selector="onStepperChanged:" destination="Eqt-Th-sGg" eventType="valueChanged" id="p7X-iy-Yg2"/>
                                 </connections>
                             </stepper>
                         </subviews>
