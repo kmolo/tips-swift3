@@ -22,10 +22,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        tipLabel.text = "$0.00"
-        totalLabel.text = "$0.00"
+        // Do any additional setup after loading the view, typically from a nib.
+        calculate()
         
     }
     
@@ -104,12 +103,19 @@ class ViewController: UIViewController {
     }
     
     func calculate(){
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.locale = Locale.current
+        
+        
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
         
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        //tipLabel.text = String(format: "$%.2f", tip)
+        //totalLabel.text = String(format: "$%.2f", total)
+        tipLabel.text = currencyFormatter.string(from: tip as NSNumber)
+        totalLabel.text = currencyFormatter.string(from: total as NSNumber)
     }
     
 }
