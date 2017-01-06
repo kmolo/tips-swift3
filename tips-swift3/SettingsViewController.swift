@@ -12,6 +12,9 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var setTipControl: UISegmentedControl!
     @IBOutlet weak var setTipStepper: UIStepper!
+
+    
+/*** ViewController Lifecycle func ***/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +42,9 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
+/*** IBAction func ***/
     
     @IBAction func onSetTipControlChanged(_ sender: Any) {
         setStepperValue()
@@ -53,6 +58,9 @@ class SettingsViewController: UIViewController {
         
         //print(newTipPercentage)
     }
+
+    
+/*** helper func ***/
     
     func setStepperValue(){
         let currentTipPercentage = setTipControl.titleForSegment(at: setTipControl.selectedSegmentIndex)!

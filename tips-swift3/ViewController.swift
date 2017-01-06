@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     
     var tipPercentages = [0.18, 0.2, 0.22]
     
+    
+/*** ViewController Lifecycle func ***/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,6 +52,8 @@ class ViewController: UIViewController {
     }
 
 
+/*** IBAction func ***/
+    
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
     }
