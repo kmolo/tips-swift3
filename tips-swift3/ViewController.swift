@@ -29,11 +29,18 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("view will appear")
+        
+        refreshTipPercentages()
+        selectSegment()
+        calculate()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("view will disappear")
+        
+        UserDefaults.standard.set(tipControl.selectedSegmentIndex, forKey: "selected_segment")
+        UserDefaults.standard.synchronize()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +57,45 @@ class ViewController: UIViewController {
         calculate()
     }
 
+    
+/*** helper func ***/
+    
+    func refreshTipPercentages(){
+        var tipLow = UserDefaults.standard.string(forKey: "tip_low") ?? "18.0"
+        var tipMid = UserDefaults.standard.string(forKey: "tip_mid") ?? "20.0"
+        var tipHigh = UserDefaults.standard.string(forKey: "tip_high") ?? "22.0"
         
+        print("TVC: tip percents without symbol")
+        print(tipLow)
+        print(tipMid)
+        print(tipHigh)
+        
+        tipPercentages[0] = (tipLow as NSString).doubleValue / 100.0
+        tipPercentages[1] = (tipMid as NSString).doubleValue / 100.0
+        tipPercentages[2] = (tipHigh as NSString).doubleValue / 100.0
+        
+        tipLow += "%"
+        tipMid += "%"
+        tipHigh += "%"
+        
+        print("TVC: tip percents with symbol")
+        print(tipLow)
+        print(tipMid)
+        print(tipHigh)
+        
+        tipControl.setTitle(tipLow, forSegmentAt: 0)
+        tipControl.setTitle(tipMid, forSegmentAt: 1)
+        tipControl.setTitle(tipHigh, forSegmentAt: 2)
+        
+    }
+    
+    func selectSegment() {
+        let selectedSegment = UserDefaults.standard.string(forKey: "selected_segment") ?? "0"
+        
+        tipControl.selectedSegmentIndex = Int(selectedSegment)!
+        
+    }
+    
     func calculate(){
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
