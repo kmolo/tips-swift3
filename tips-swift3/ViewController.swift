@@ -32,6 +32,13 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         print("view will appear")
         
+        let now = NSDate()
+        let then = UserDefaults.standard.object(forKey: "savedTime") as? Date
+        
+        if (then != nil && now.timeIntervalSince(then!) < 600){
+            billField.text = UserDefaults.standard.string(forKey: "savedAmt")
+        }
+        
         refreshTipPercentages()
         selectSegment()
         calculate()
@@ -44,6 +51,8 @@ class ViewController: UIViewController {
         print("view will disappear")
         
         UserDefaults.standard.set(tipControl.selectedSegmentIndex, forKey: "selected_segment")
+        UserDefaults.standard.set(NSDate(), forKey: "savedTime")
+        UserDefaults.standard.set(billField.text, forKey: "savedAmt")
         UserDefaults.standard.synchronize()
     }
 
