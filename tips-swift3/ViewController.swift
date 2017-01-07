@@ -80,10 +80,10 @@ class ViewController: UIViewController {
         var tipMid = UserDefaults.standard.string(forKey: "tip_mid") ?? "20.0"
         var tipHigh = UserDefaults.standard.string(forKey: "tip_high") ?? "22.0"
         
-        print("TVC: tip percents without symbol")
-        print(tipLow)
-        print(tipMid)
-        print(tipHigh)
+        //print("TVC: tip percents without symbol")
+        //print(tipLow)
+        //print(tipMid)
+        //print(tipHigh)
         
         tipPercentages[0] = (tipLow as NSString).doubleValue / 100.0
         tipPercentages[1] = (tipMid as NSString).doubleValue / 100.0
@@ -93,10 +93,10 @@ class ViewController: UIViewController {
         tipMid += "%"
         tipHigh += "%"
         
-        print("TVC: tip percents with symbol")
-        print(tipLow)
-        print(tipMid)
-        print(tipHigh)
+        //print("TVC: tip percents with symbol")
+        //print(tipLow)
+        //print(tipMid)
+        //print(tipHigh)
         
         tipControl.setTitle(tipLow, forSegmentAt: 0)
         tipControl.setTitle(tipMid, forSegmentAt: 1)
